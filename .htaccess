@@ -1,6 +1,9 @@
 RewriteEngine On
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.  <em>index\ HTTP/
+RewriteRule ^(.</em>  )index$ [http://www.samuelborden.com/$1](http://www.samuelborden.com/%241) [L,R=301]
 
-#remove html extension
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^([^\.]+)$ $1.html
+RewriteRule ^([^/]+)/$ [http://www.samuelborden.com/$1](http://www.samuelborden.com/%241) [L,R=301]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.+).html\ HTTP/
+RewriteRule ^(.+).html$ [http://www.samuelborden.com/](http://www.samuelborden.com/)1 [L,R=301] RewriteRule ^([\w-]+) /$1.html [L]
